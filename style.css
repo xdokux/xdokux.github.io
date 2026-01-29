@@ -61,3 +61,12 @@ p {
   line-height: 1.5;
   color: var(--fg);
 }
+
+.post-image {
+  width: 100%;           /* makes it fit the width of the post container */
+  height: auto;          /* preserves aspect ratio */
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.5rem; /* adds space below image so alt text shows */
+}
