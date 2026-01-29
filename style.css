@@ -1,0 +1,33 @@
+:root {
+  --bg: #0b0e11;
+  --fg: #e6e6e6;
+  --muted: #8a8f98;
+  --accent: #2cffc3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 720px;
+  padding: 2rem 1.5rem;
+  margin: auto;
+}
+
+h1 {
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+p {
+  color: var(--muted);
+}
