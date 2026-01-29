@@ -16,14 +16,11 @@
       <span class="cyber-glitch" data-text="Arcadian">Arcadian</span>
       <span class="cyber-glitch" data-text="Developments">Developments</span>
     </h1>
-<section class="cyber-section'>
+<section class="cyber-section">
   <h2 class="cyber-neon">Latest Transmission</h2>
 
-  <div class="latest-post">
-    <a href="blog.html#transmission-1" class+"latest-post-title">Transmission #2</a>
-    <p class="latest-post-preview">
-      Im so happy with the way the website is turning...
-    </p>
+  <div id="latest-post">
+    <!-- Java Script Autopops this area -->
   </div>
 </section>
 <p class="cyber-muted">
@@ -31,5 +28,30 @@
 </p>
 
   </main>
+  <script>
+  // Automatically display the latest transmission on homepage
+  fetch('blog.html')
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+
+      const posts = doc.querySelectorAll('.post');
+      if (posts.length === 0) return;
+
+      const latest = posts[posts.length - 1]; // last post = newest
+      const title = latest.querySelector('.post-title').textContent;
+      const content = latest.querySelector('.post-content').textContent;
+      const preview = content.slice(0, 150) + '...';
+      const id = latest.id;
+
+      const container = document.getElementById('latest-post');
+      container.innerHTML = `
+        <a href="blog.html#${id}" class="latest-post-title">${title}</a>
+        <p class="latest-post-preview">${preview}</p>
+      `;
+    });
+</script>
+  
 </body>
 </html>
