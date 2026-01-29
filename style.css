@@ -23,8 +23,9 @@ main {
   margin: auto;
 }
 
-h1 {
-  font-size: 2.5rem;
+/* Global title styling (including glitch titles) */
+h1, .cyber-glitch {
+  font-size: 2.1rem;  /* adjust smaller if needed */
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.1;
