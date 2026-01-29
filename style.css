@@ -70,3 +70,10 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.05);
   margin-bottom: 0.5rem; /* adds space below image so alt text shows */
 }
+
+.post-credit {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
