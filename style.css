@@ -103,3 +103,52 @@ p {
   line-height: 1.4;
 }
 
+
+.social-sidebar {
+  position: fixed;
+  top: 6rem; /* aligns below your header */
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 180px;
+  z-index: 10;
+}
+
+.social-card {
+  background: rgba(20, 20, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: #cfd8ff;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.social-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.social-card:hover {
+  background: rgba(30, 30, 45, 0.95);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.social-card:hover a {
+  color: #ffffff;
+}
+
+/* Push main content so it doesn’t overlap */
+main {
+  margin-left: 240px; /* adjust if needed for spacing */
+}
+
+/* Hide on small screens */
+@media (max-width: 900px) {
+  .social-sidebar {
+    display: none;
+  }
+}
